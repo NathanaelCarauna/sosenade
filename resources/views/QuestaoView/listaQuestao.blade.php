@@ -92,23 +92,23 @@
 								</div>
 							</td>
 						</tr>
-					@endforeach
-				</tbody>
-			</table>
+                        @endforeach
+                    </tbody>
+                </table>
         </div>
 		@else
 			<p class="text-center alert alert-light">Não existem questões correspondentes até o momento.</p>
 		@endif
 
-		<hr class="star-light">
-        <div>
+		<hr class="star-light" style="margin: 30px 0px">
+        <div style="margin-top: 30px">
             <p style="font-weight: bold">Legenda:</p>
-            <a class="btn btn-success" href="#modal_{{$questao->qstid}}" data-toggle="modal" data-placement="bottom" rel="tooltip" title="Visualizar"><i class="fa fa-eye" ></i></a>
-            <span>Mostrar questão</span>
-            <a class="btn btn-warning" href="{{route('edit_qst', ['id'=>$questao->qstid])}}" data-placement="bottom" rel="tooltip" title="Editar"><i class="fa fa-pencil"></i></a>
-            <span>Editar questão</span>
-            <a class="btn btn-danger" href="{{route('delete_qst', ['id'=>$questao->qstid])}}" data-placement="bottom" rel="tooltip" title="Excluir" onclick="return confirm('Você tem certeza que deseja excluir?')"><i class="fa fa-trash"></i></a>
-            <span>Deletar questao</span>
+            <a class="btn btn-success" data-toggle="modal" data-placement="bottom" rel="tooltip" title="Visualizar"><i class="fa fa-eye" ></i></a>
+            <span style="margin-right: 10px">Mostrar questão</span>
+            <a class="btn btn-warning" data-placement="bottom" rel="tooltip" title="Editar"><i class="fa fa-pencil"></i></a>
+            <span style="margin-right: 10px">Editar questão</span>
+            <a class="btn btn-danger" data-placement="bottom" rel="tooltip" title="Excluir"><i class="fa fa-trash"></i></a>
+            <span style="margin-right: 10px">Deletar questao</span>
         </div>
 
 	<script type="text/javascript">
