@@ -2,7 +2,7 @@
 @section('titulo','Questões Cadastradas')
 @section('content')
 
-	<div class="shadow p-4 bg-white rounded container-fluid" style="overflow-x: auto;">
+	<div class="shadow p-3 bg-white" style="border-radius: 10px" style="overflow-x: auto; padding: 0">
 
         <div class="row" style="background: #1B2E4F; margin-top: -15px; margin-bottom:  30px; border-radius: 10px 10px 0 0; color: white">
             <h1 class="col-8" style="margin: 15px;">Questões cadastradas</h1>
