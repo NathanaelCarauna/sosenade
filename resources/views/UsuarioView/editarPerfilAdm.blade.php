@@ -2,13 +2,16 @@
 @section('titulo','Editar Conta')
 @section('content')
 
-	<form class="shadow p-3 bg-white rounded" action= "{{route('update_usuario')}}" method="post">
+	<form class="shadow p-3 bg-white text-center" style="border-radius: 10px" action= "{{route('update_usuario')}}" method="post">
 		<input type="hidden" name="_token" value="{{csrf_token()}}">
 		<input type="hidden" name="id" value="{{$usuario->id}}">
 
 		<input type="hidden" name="password" value="{{$usuario->password}}">
 
-		<h1 class="text-center"> Editar Conta </h1><br>
+		<div class="row" style="background: #1B2E4F; margin-top: -15px; margin-bottom:  30px; border-radius: 10px 10px 0 0; color: white">
+            <h1 style="margin: 15px"> Editar conta </h1>
+            {{-- <p><a href="">Inicio</a> > <a href="">Olá, fulano</a> > <a href=""></a>Meu Perfil</p> --}}
+        </div>
 
 		<div class="form-group justify-content-center row">
 			<div class="form-group col-md-8">
@@ -20,7 +23,7 @@
 					</span>
 		  		@endif
 			</div>
-	
+
 			<div class="form-group col-md-4">
 				<label for="cpf">CPF</label>
 				<input type="text" id="cpf" name="cpf" placeholder="xxx.xxx.xxx-xx" class="form-control{{ $errors->has('cpf') ? ' is-invalid' : '' }} cpf" value="{{$usuario->cpf}}" required autofocus>
@@ -64,7 +67,7 @@
 				<select name="curso_id" class="form-control{{ $errors->has('curso_id') ? ' is-invalid' : '' }}" required autofocus>
 					@foreach ($cursos as $curso)
 						<option value="{{$curso->id}}" {{$usuario->curso_id == $curso->id ? 'selected' : '' }}>
-							{{$curso->curso_nome}} 
+							{{$curso->curso_nome}}
 						</option>
 					@endforeach
 				</select>
